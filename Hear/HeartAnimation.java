@@ -19,7 +19,7 @@ public class HeartAnimation extends JPanel {
             heart.lines++;
             if (heart.lines > 100) heart.lines = 0;
             try {
-                Thread.sle(80); // Velocidade da animação
+                Thread.sle(80); 
             } catch (InterruptedException e) {
             }
         }
@@ -34,21 +34,21 @@ public class HeartAnimation extends JPanel {
         int centerY = getHeight() / 3;
 
         for (int i = 0; i < lines; i++) {
-            double t = Math.toRadians(i * 4); // Angulo
+            double t = Math.toRadians(i * 4); 
             int x = (int) (16 * Math.pow(Math.sin(t), 3) * 20) + centerX;
             int y = (int) (- (13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t)) * 20) + centerY;
 
             if (i < 50) {
-                g.setColor(Color.RED); // Primeira metade
+                g.setColor(Color.RED); 
             } else {
-                g.setColor(Color.pink); // Segunda metade
+                g.setColor(Color.pink); 
             }
     
 
             g.drawLine(centerX, centerY + 100, x, y);
         }
-        g.setColor(Color.BLACK); // Cor do texto
-        g.setFont(new Font("Arial", Font.BOLD, 28)); // Fonte personalizada
-        g.drawString("Eu te amo <3", centerX - 70, centerY + 350); // Texto centralizado 
-    }
+        g.setColor(Color.BLACK); 
+        g.setFont(new Font("Arial", Font.BOLD, 28)); 
+        g.drawString("Eu te amo <3", centerX - 70, centerY + 350);
+
 }
