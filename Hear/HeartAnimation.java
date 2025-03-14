@@ -47,6 +47,8 @@ public class HeartAnimation extends JPanel {
 
             g.drawLine(centerX, centerY + 100, x, y);
         }
+        }
+
         g.setColor(Color.BLACK); 
         g.setFont(new Font("Arial", Font.BOLD, 28)); 
         g.drawString("Eu te amo <3", centerX - 70, centerY + 350);
